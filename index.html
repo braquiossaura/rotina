@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Rotina & Treinos</title>
+    <!-- Favicon de Dinossauro -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦕</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        @media print {
+            body {
+                background-color: white;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-bg {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            .page-break {
+                page-break-inside: avoid;
+            }
+            .page-break-before {
+                page-break-before: always;
+            }
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="text-gray-800 p-4 md:p-8">
+
+    <!-- TELA DE LOGIN -->
+    <div id="login-screen" class="fixed inset-0 bg-slate-50/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 transition-opacity duration-300">
+        <div class="bg-white p-10 rounded-[2rem] shadow-xl shadow-[#eef4ec] border border-gray-100 max-w-sm w-full text-center">
+            <div class="mb-6 flex justify-center">
+                <div class="w-16 h-16 bg-[#eef4ec] rounded-full flex items-center justify-center text-3xl">
+                    🦕
+                </div>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-500 mb-8">Minha rotina é privada!</h2>
+            
+            <input type="password" id="pwd-input" class="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:outline-none focus:border-[#98b88e] focus:ring-4 focus:ring-[#eef4ec] mb-4 text-center tracking-[0.5em] text-xl font-medium transition-all" placeholder="••••••">
+            
+            <button onclick="login()" class="w-full bg-gradient-to-r from-[#98b88e] to-[#7d9b74] text-white font-semibold py-4 rounded-2xl hover:opacity-90 transition-opacity shadow-md shadow-[#98b88e]/40">
+                Acessar
+            </button>
+            
+            <p id="error-msg" class="text-pink-500 text-sm mt-4 hidden font-medium">Senha incorreta. Tente novamente!</p>
+        </div>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL (Protegido por Cifra ROT13) -->
+    <div id="main-content" class="max-w-[1400px] mx-auto hidden opacity-0 transition-opacity duration-500">
+        
+        <!-- Header Principal -->
+        <div class="mb-10 mt-2 flex justify-center print-bg page-break">
+            <div class="bg-white px-12 py-4 rounded-full shadow-sm border border-indigo-50/80">
+                <h1 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500 tracking-[0.2em] uppercase text-center ml-1">
+                    Ebgvan
+                </h1>
+            </div>
+        </div>
+
+        <!-- TABELA 1: ROTINA -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-x-auto print-bg page-break mb-12">
+            <table class="w-full text-left border-collapse min-w-[900px]">
+                <thead>
+                    <tr class="bg-gray-50 border-b border-gray-200">
+                        <th class="p-4 font-semibold text-gray-600 w-32 rounded-tl-2xl">Ubeáevb</th>
+                        <th class="p-4 font-semibold text-gray-600 w-[12%]">Frthaqn</th>
+                        <th class="p-4 font-semibold text-gray-600 w-[12%]">Greçn</th>
+                        <th class="p-4 font-semibold text-gray-600 w-[12%]">Dhnegn</th>
+                        <th class="p-4 font-semibold text-gray-600 w-[12%]">Dhvagn</th>
+                        <th class="p-4 font-semibold text-gray-600 w-[12%]">Frkgn</th>
+                        <th class="p-4 font-semibold text-indigo-600 w-[12%] bg-indigo-50/50">Fáonqb</th>
+                        <th class="p-4 font-semibold text-indigo-600 w-[12%] bg-indigo-50/50 rounded-tr-2xl">Qbzvatb</th>
+                    </tr>
+                </thead>
+                <tbody class="text-[13px] leading-snug">
+                    <tr class="border-b border-gray-100 bg-slate-50/50">
+                        <td class="p-4 font-medium text-gray-500">23:00 - 08:00</td>
+                        <td class="p-4 text-slate-500" colspan="7">
+                            <div class="flex items-center justify-center gap-2">
+                                💤 <span class="font-medium tracking-wide">Qbezve</span>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="border-b border-gray-100 align-top">
+                        <td class="p-4 font-medium text-gray-500 bg-gray-50/30">08:00 - 10:00</td>
+                        <td class="p-4 bg-emerald-50/30 print-bg">
+                            🏋️‍♀️ Npnqrzvn<br>☕ Pnsé
+                        </td>
+                        <td class="p-4 bg-emerald-50/30 print-bg">
+                            🏋️‍♀️ Npnqrzvn<br>☕ Pnsé
+                        </td>
+                        <td class="p-4 bg-emerald-50/80 print-bg border-l border-emerald-100">
+                            🏋️‍♀️ Npnqrzvn<br>☕ Pnsé<br>
+                            <span class="inline-block mt-2 font-medium text-emerald-800 text-xs tracking-tight">🇳🇱 Ubynaqêf<sup class="font-normal text-[10px] ml-1 opacity-75">20z</sup></span>
+                        </td>
+                        <td class="p-4 bg-emerald-50/80 print-bg border-l border-emerald-100">
+                            🏋️‍♀️ Npnqrzvn<br>☕ Pnsé<br>
+                            <span class="inline-block mt-2 font-medium text-emerald-800 text-xs tracking-tight">🇪🇸 Rfcnauby<sup class="font-normal text-[10px] ml-1 opacity-75">20z</sup></span>
+                        </td>
+                        <td class="p-4 bg-emerald-50/80 print-bg border-l border-emerald-100">
+                            🏋️‍♀️ Npnqrzvn<br>☕ Pnsé<br>
+                            <span class="inline-block mt-2 font-medium text-emerald-800 text-xs tracking-tight">🇫🇷 Senapêf<sup class="font-normal text-[10px] ml-1 opacity-75">20z</sup></span>
+                        </td>
+                        <td class="p-4 bg-emerald-50/30 print-bg border-l border-gray-100">
+                            🏋️‍♀️ Npnqrzvn<br>☕ Pnsé
+                        </td>
+                        <td class="p-4 bg-emerald-50/30 print-bg">
+                            🏋️‍♀️ Npnqrzvn<br>☕ Pnsé
+                        </td>
+                    </tr>
+
+                    <tr class="border-b border-gray-100 align-top">
+                        <td class="p-4 font-medium text-gray-500 bg-gray-50/30">10:00 - 12:30</td>
+                        <td class="p-4 bg-sky-50/60 print-bg">
+                            <span class="font-medium text-sky-800">🇬🇧 Vatyêf<sup class="font-normal text-[10px] ml-1 opacity-75">1u</sup></span><br>
+                            <span class="text-gray-500 text-xs mt-1 block">⏳ Grzcb Yvier</span>
+                        </td>
+                        <td class="p-4 bg-sky-50/60 print-bg">
+                            <span class="font-medium text-sky-800">🇩🇪 Nyrzãb<sup class="font-normal text-[10px] ml-1 opacity-75">1u</sup></span><br>
+                            <span class="text-gray-500 text-xs mt-1 block">⏳ Grzcb Yvier</span>
+                        </td>
+                        <td class="p-4 bg-amber-50/60 print-bg border-l border-amber-100">
+                            💼 Genonyub
+                        </td>
+                        <td class="p-4 bg-amber-50/60 print-bg border-l border-amber-100">
+                            💼 Genonyub
+                        </td>
+                        <td class="p-4 bg-amber-50/60 print-bg border-l border-amber-100">
+                            💼 Genonyub
+                        </td>
+                        <td class="p-4 bg-purple-50/40 print-bg border-l border-gray-100">
+                            🎨 Qrfraub<br>
+                            <span class="text-gray-400 text-xs">bh 💼 Genb</span>
+                        </td>
+                        <td class="p-4 bg-purple-50/40 print-bg">
+                            🎨 Qrfraub
+                        </td>
+                    </tr>
+
+                    <tr class="border-b border-gray-100 bg-orange-50/30 print-bg">
+                        <td class="p-4 font-medium text-gray-500">12:30</td>
+                        <td class="p-4 text-center font-medium text-orange-700" colspan="7">
+                            🍽️ Nyzbçb
+                        </td>
+                    </tr>
+
+                    <tr class="border-b border-gray-100 align-top">
+                        <td class="p-4 font-medium text-gray-500 bg-gray-50/30">Cóf-Nyzbçb<br><span class="text-xs font-normal">~ 1u qr qhençãb</span></td>
+                        <td class="p-4 bg-stone-50 print-bg">🧹 Rfpevgóevb</td>
+                        <td class="p-4 bg-stone-50 print-bg">🧹 Dhnegb</td>
+                        <td class="p-4 bg-stone-50 print-bg">🧹 Fnyn</td>
+                        <td class="p-4 bg-stone-50 print-bg">🧹 Fnpnqn</td>
+                        <td class="p-4 bg-stone-50 print-bg">🧹 Yninaqrevn</td>
+                        <td class="p-4 bg-stone-50 print-bg">🧹 Onaurveb</td>
+                        <td class="p-4 bg-stone-50 print-bg">🧹 Pbmvaun</td>
+                    </tr>
+
+                    <tr class="align-top">
+                        <td class="p-4 font-medium text-gray-500 bg-gray-50/30">
+                            Gneqr/Svz qb qvn<br>
+                        </td>
+                        <td class="p-4 bg-pink-50/40 print-bg">
+                            <span class="text-xs font-semibold text-pink-800 bg-pink-100 px-2 py-0.5 rounded-md mb-2 inline-block">14:00+</span><br>
+                            📝 Ynhqb<br>🎮 Wbtb abib
+                        </td>
+                        <td class="p-4 bg-pink-50/40 print-bg">
+                            <span class="text-xs font-semibold text-pink-800 bg-pink-100 px-2 py-0.5 rounded-md mb-2 inline-block">14:00+</span><br>
+                            💚 Qvirefãb<br>🏺 Preâzvpn
+                        </td>
+                        <td class="p-4 bg-amber-50/60 print-bg border-l border-amber-100">
+                            <span class="text-xs font-semibold text-amber-800 bg-amber-200 px-2 py-0.5 rounded-md mb-2 inline-block">13:30+</span><br>
+                            💼 Genonyub<br>
+                            <span class="mt-1 block">💅 Phvqnqbf</span>
+                        </td>
+                        <td class="p-4 bg-amber-50/60 print-bg border-l border-amber-100">
+                            <span class="text-xs font-semibold text-amber-800 bg-amber-200 px-2 py-0.5 rounded-md mb-2 inline-block">13:30+</span><br>
+                            💼 Genonyub<br><span class="text-gray-500 text-xs mt-1 block">⏳ Grzcb Yvier</span>
+                        </td>
+                        <td class="p-4 bg-amber-50/60 print-bg border-l border-amber-100">
+                            <span class="text-xs font-semibold text-amber-800 bg-amber-200 px-2 py-0.5 rounded-md mb-2 inline-block">13:30+</span><br>
+                            💼 Genonyub<br><span class="text-gray-500 text-xs mt-1 block">⏳ Grzcb Yvier</span>
+                        </td>
+                        <td class="p-4 bg-pink-50/40 print-bg border-l border-gray-100">
+                            <span class="text-xs font-semibold text-pink-800 bg-pink-100 px-2 py-0.5 rounded-md mb-2 inline-block">14:00+</span><br>
+                            💬 Zrafntraf<br>💚 Qvirefãb
+                        </td>
+                        <td class="p-4 bg-pink-50/40 print-bg">
+                            <span class="text-xs font-semibold text-pink-800 bg-pink-100 px-2 py-0.5 rounded-md mb-2 inline-block">14:00+</span><br>
+                            📱 Snmre Cbfg<br>💚 Qvirefãb
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Header Ginástica -->
+        <div class="mb-10 mt-6 flex justify-center print-bg page-break-before">
+            <div class="bg-white px-12 py-4 rounded-full shadow-sm border border-pink-50/80">
+                <h1 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500 tracking-[0.2em] uppercase text-center ml-1">
+                    Tvaáfgvpn
+                </h1>
+            </div>
+        </div>
+
+        <!-- TABELA 2: TREINOS -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-x-auto print-bg page-break mb-8">
+            <table class="w-full text-left border-collapse min-w-[950px]">
+                <thead>
+                    <tr class="bg-gray-50 border-b border-gray-200">
+                        <th class="p-4 font-semibold text-gray-600 w-28 rounded-tl-2xl">Ybpny</th>
+                        <th class="p-4 font-semibold text-gray-600 w-[13%]">Frthaqn</th>
+                        <th class="p-4 font-semibold text-gray-600 w-[13%]">Greçn</th>
+                        <th class="p-4 font-semibold text-gray-600 w-[13%]">Dhnegn</th>
+                        <th class="p-4 font-semibold text-gray-600 w-[13%]">Dhvagn</th>
+                        <th class="p-4 font-semibold text-gray-600 w-[13%]">Frkgn</th>
+                        <th class="p-4 font-semibold text-indigo-600 w-[13%] bg-indigo-50/50">Fáonqb</th>
+                        <th class="p-4 font-semibold text-indigo-600 w-[13%] bg-indigo-50/50 rounded-tr-2xl">Qbzvatb</th>
+                    </tr>
+                </thead>
+                <tbody class="text-[12px] leading-tight">
+                    <!-- Linha 1: SmartFit -->
+                    <tr class="border-b border-gray-100 align-top">
+                        <td class="p-4 font-semibold text-orange-600 bg-orange-50/20">
+                            FznegSvg
+                        </td>
+                        
+                        <td class="p-4 bg-orange-50/30 print-bg">
+                            <span class="text-[11px] font-semibold text-orange-800 bg-orange-200 px-2 py-0.5 rounded-md mb-3 inline-block">Vasrevberf</span>
+                            <ul class="list-disc ml-3 space-y-1.5 text-gray-700">
+                                <li>Pnqreven noqhgben</li>
+                                <li>Pnqreven syrkben</li>
+                                <li>Yrt cerff ubevmbagny</li>
+                                <li>Zrfn syrkben (qrvgnqn)</li>
+                                <li>Cnagheevyun zádhvan</li>
+                            </ul>
+                        </td>
+
+                        <td class="p-4 bg-sky-50/40 print-bg border-l border-white">
+                            <span class="text-[11px] font-semibold text-sky-800 bg-sky-200 px-2 py-0.5 rounded-md mb-3 inline-block">Fhcrevberf</span>
+                            <ul class="list-disc ml-3 space-y-1.5 text-gray-700">
+                                <li>Fhcvab ergb (zádhvan)</li>
+                                <li>Oíprcf (zádhvan)</li>
+                                <li>Pehpvsvkb (zádhvan/ibnqbe)</li>
+                                <li>Oíprcf (unygref)</li>
+                                <li>Ryrinçãb yngreny (unygref)</li>
+                            </ul>
+                        </td>
+
+                        <td class="p-4 bg-emerald-50/40 print-bg border-l border-white" rowspan="2">
+                            <span class="text-[11px] font-semibold text-emerald-800 bg-emerald-200 px-2 py-0.5 rounded-md mb-3 inline-block">Qvn Yvier</span>
+                            <ul class="list-disc ml-3 space-y-1.5 mt-2 text-gray-700">
+                                <li>Rfgrven</li>
+                            </ul>
+                        </td>
+
+                        <td class="p-4 bg-purple-50/40 print-bg border-l border-white" rowspan="2">
+                            <span class="text-[11px] font-semibold text-purple-800 bg-purple-200 px-2 py-0.5 rounded-md mb-3 inline-block">Syrkvovyvqnqr</span>
+                            <ul class="list-disc ml-3 space-y-1.5 mt-2 text-gray-700">
+                                <li>Chknqbe nygb pbfgnf</li>
+                                <li>Pebffbire havyngreny</li>
+                                <li>Ryrinçãb qr creanf</li>
+                                <li>Zbovyvqnqr bzoeb (obyn qr cvyngrf)</li>
+                                <li>Nybatnzragb cbfgrevbe (rfcnyqne)</li>
+                            </ul>
+                        </td>
+
+                        <td class="p-4 bg-indigo-50/40 print-bg border-l border-white" rowspan="2">
+                            <span class="text-[11px] font-semibold text-indigo-800 bg-indigo-200 px-2 py-0.5 rounded-md mb-3 inline-block">Cebcevbprcçãb</span>
+                            <ul class="list-disc ml-3 space-y-1.5 mt-2 text-gray-700">
+                                <li>Pnzvaunqn qb snmraqreveb</li>
+                                <li>Ntnpunzragb c/ noqhçãb (ryáfgvpb)</li>
+                                <li>Noqbzvany vafrgb zbegb (qrnq oht)</li>
+                                <li>Nybatnzragb cebshaqb qn cnagheevyun</li>
+                            </ul>
+                        </td>
+
+                        <td class="p-4 bg-orange-50/30 print-bg border-l border-gray-100">
+                            <span class="text-[11px] font-semibold text-orange-800 bg-orange-200 px-2 py-0.5 rounded-md mb-3 inline-block">Vasrevberf</span>
+                            <ul class="list-disc ml-3 space-y-1.5 text-gray-700">
+                                <li>Yrt cerff 45°</li>
+                                <li>Pnqreven rkgrafben</li>
+                                <li>Ryrinçãb cêyivpn (zádhvan)</li>
+                                <li>Ntnpunzragb fzvgu (zádhvan)</li>
+                                <li>Tyúgrb (zádhvan/pnob)</li>
+                            </ul>
+                        </td>
+
+                        <td class="p-4 bg-sky-50/40 print-bg border-l border-white">
+                            <span class="text-[11px] font-semibold text-sky-800 bg-sky-200 px-2 py-0.5 rounded-md mb-3 inline-block">Fhcrevberf</span>
+                            <ul class="list-disc ml-3 space-y-1.5 text-gray-700">
+                                <li>Chknqn seragr (chyyrl)</li>
+                                <li>Geíprcf ab chyyrl (pbeqn)</li>
+                                <li>Erznqn fragnqn</li>
+                                <li>Geíprcf zádhvan bh senapêf</li>
+                                <li>Chknqn geiâathyb (chyyrl)</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <!-- Linha 2: Condomínio -->
+                    <tr class="align-top border-t-[3px] border-gray-200">
+                        <td class="p-4 font-semibold text-stone-600 bg-stone-50/70 border-r border-gray-100">
+                            Pbaqbzíavb
+                        </td>
+                        
+                        <td class="p-4 bg-orange-100/30 print-bg border-l border-white">
+                            <ul class="list-disc ml-3 space-y-1.5 text-gray-700">
+                                <li>Noqhgbe pbz gbeabmryrven</li>
+                                <li>Syrkãb qr crean</li>
+                                <li>Fgvss pbz unygref crfnqbf</li>
+                            </ul>
+                        </td>
+
+                        <td class="p-4 bg-sky-100/30 print-bg border-l border-white">
+                            <ul class="list-disc ml-3 space-y-1.5 text-gray-700">
+                                <li>Ibnqbe</li>
+                                <li>Ebfpn qvergn (zádhvan)</li>
+                                <li>Ryrinçãb yngreny</li>
+                            </ul>
+                        </td>
+
+                        <td class="p-4 bg-orange-100/30 print-bg border-l border-gray-100">
+                            <ul class="list-disc ml-3 space-y-1.5 text-gray-700">
+                                <li>Rkgrafben</li>
+                                <li>Ntnpunzragb pbz unygref</li>
+                                <li>Ryrinçãb cêyivpn ab fbyb</li>
+                                <li>Tyúgrb 4 ncbvbf (ryáfgvpb)</li>
+                            </ul>
+                        </td>
+
+                        <td class="p-4 bg-sky-100/30 print-bg border-l border-white">
+                            <ul class="list-disc ml-3 space-y-1.5 text-gray-700">
+                                <li>Chknqbe nygb seragr</li>
+                                <li>Rkgrafbe qr geíprcf</li>
+                                <li>Erznqn onvkn</li>
+                                <li>Geíprcf pbvpr pbz unygref</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script>
+        // Função mágica que traduz o texto cifrado de volta para português 
+        function rot13(str) {
+            return str.replace(/[a-zA-Z]/g, function(c) {
+                return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+            });
+        }
+
+        // Aplica a tradução apenas nos textos da tabela, sem quebrar o layout!
+        function decodeContent() {
+            const walker = document.createTreeWalker(
+                document.getElementById('main-content'),
+                NodeFilter.SHOW_TEXT,
+                null,
+                false
+            );
+            let node;
+            while (node = walker.nextNode()) {
+                if (node.nodeValue.trim() !== '') {
+                    node.nodeValue = rot13(node.nodeValue);
+                }
+            }
+        }
+
+        function showContent() {
+            const loginScreen = document.getElementById('login-screen');
+            const mainContent = document.getElementById('main-content');
+            
+            // Decifra o conteúdo
+            decodeContent();
+
+            loginScreen.style.opacity = '0';
+            setTimeout(() => {
+                loginScreen.style.display = 'none';
+                mainContent.classList.remove('hidden');
+                setTimeout(() => {
+                    mainContent.style.opacity = '1';
+                }, 50);
+            }, 300);
+        }
+
+        function checkAuth() {
+            let isAuth = false;
+            try {
+                isAuth = localStorage.getItem('rotina_auth') === 'true';
+            } catch (e) {}
+
+            if (isAuth) {
+                document.getElementById('login-screen').style.display = 'none';
+                const mainContent = document.getElementById('main-content');
+                
+                decodeContent();
+                
+                mainContent.classList.remove('hidden');
+                mainContent.style.opacity = '1';
+            }
+        }
+
+        function login() {
+            const input = document.getElementById('pwd-input').value.trim();
+            const errorMsg = document.getElementById('error-msg');
+            
+            // Senha continua sendo 726632
+            if (btoa(input.split('').reverse().join('')) === 'MjM2NjI3') {
+                errorMsg.classList.add('hidden');
+                try {
+                    localStorage.setItem('rotina_auth', 'true');
+                } catch (e) { }
+                showContent();
+            } else {
+                errorMsg.classList.remove('hidden');
+                document.getElementById('pwd-input').value = '';
+                document.getElementById('pwd-input').focus();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            checkAuth();
+            document.getElementById('pwd-input').addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') login();
+            });
+        });
+    </script>
+</body>
+</html>
