@@ -5,42 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rotina</title>
     <!-- Favicon de Dinossauro -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22[http://www.w3.org/2000/svg%22](http://www.w3.org/2000/svg%22) viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦕</text></svg>">
-    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
-    <link href="[https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap)" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦕</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f8fafc;
         }
+        /* BLINDAGEM DE SEGURANÇA: Garante que a tabela fique escondida e estruturada mesmo se o Tailwind falhar! */
+        .blindagem { display: none !important; }
+        .tela-segura { 
+            position: fixed !important; inset: 0 !important; background: rgba(248, 250, 252, 0.9) !important;
+            display: flex !important; align-items: center !important; justify-content: center !important; z-index: 50 !important;
+        }
         @media print {
-            body {
-                background-color: white;
-            }
-            .no-print {
-                display: none !important;
-            }
-            .print-bg {
-                print-color-adjust: exact;
-                -webkit-print-color-adjust: exact;
-            }
-            .page-break {
-                page-break-inside: avoid;
-            }
-            .page-break-before {
-                page-break-before: always;
-            }
+            body { background-color: white; }
+            .no-print { display: none !important; }
+            .print-bg { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+            .page-break { page-break-inside: avoid; }
+            .page-break-before { page-break-before: always; }
         }
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-        }
+        .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
     </style>
 </head>
 <body class="text-gray-800 p-2 md:p-8">
 
     <!-- TELA DE LOGIN -->
-    <div id="login-screen" class="fixed inset-0 bg-slate-50/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 transition-opacity duration-300">
+    <div id="login-screen" class="tela-segura bg-slate-50/80 backdrop-blur-sm transition-opacity duration-300 p-4">
         <div class="bg-white p-10 rounded-[2rem] shadow-xl shadow-[#eef4ec] border border-gray-100 max-w-sm w-full text-center">
             <div class="mb-6 flex justify-center">
                 <div class="w-16 h-16 bg-[#eef4ec] rounded-full flex items-center justify-center text-3xl">
@@ -59,8 +51,8 @@
         </div>
     </div>
 
-    <!-- CONTEÚDO PRINCIPAL (Protegido por Cifra ROT13) -->
-    <div id="main-content" class="max-w-[1400px] mx-auto hidden opacity-0 transition-opacity duration-500">
+    <!-- CONTEÚDO PRINCIPAL (Protegido por Cifra ROT13 e Blindagem) -->
+    <div id="main-content" class="max-w-[1400px] mx-auto hidden opacity-0 transition-opacity duration-500 blindagem">
         
         <!-- Header Principal -->
         <div class="mb-10 mt-2 flex justify-center print-bg page-break">
@@ -72,7 +64,8 @@
         </div>
 
         <div class="md:hidden flex items-center gap-2 mb-3 px-2">
-            <svg class="w-4 h-4 text-indigo-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            <!-- SVG com tamanhos fixos para não explodirem -->
+            <svg class="w-4 h-4 text-indigo-400 animate-pulse" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
             <span class="text-xs text-gray-500 italic">Qrfyvmr cnen ire n frznan pbzcyrgn</span>
         </div>
 
@@ -223,7 +216,8 @@
         </div>
         
         <div class="md:hidden flex items-center gap-2 mb-3 px-2">
-            <svg class="w-4 h-4 text-pink-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            <!-- SVG protegido contra bugs de dimensão -->
+            <svg class="w-4 h-4 text-pink-400 animate-pulse" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
             <span class="text-xs text-gray-500 italic">Qrfyvmr cnen ire n frznan pbzcyrgn</span>
         </div>
 
@@ -245,12 +239,11 @@
                 <tbody class="text-[12px] leading-tight">
                     <!-- Linha 1: SmartFit -->
                     <tr class="align-top border-b border-gray-100">
-                        <!-- Primeira Coluna Fixa -->
                         <td class="p-3 md:p-4 font-semibold text-orange-600 sticky left-0 z-20 bg-orange-50 shadow-[2px_0_4px_-1px_rgba(0,0,0,0.05)]">
                             FznegSvg
                         </td>
                         
-                        <!-- Segunda -->
+                        <!-- Segunda (SmartFit) -->
                         <td class="p-3 md:p-4 bg-orange-50/30 print-bg border-l border-white">
                             <span class="text-[11px] font-semibold text-orange-800 bg-orange-200 px-2 py-0.5 rounded-md mb-3 inline-block">Vasrevberf</span>
                             <ul class="list-disc ml-3 space-y-1.5 text-gray-700">
@@ -262,15 +255,15 @@
                             </ul>
                         </td>
 
-                        <!-- Terça -->
+                        <!-- Terça (SmartFit) -->
                         <td class="p-3 md:p-4 bg-sky-50/40 print-bg border-l border-white">
                             <span class="text-[11px] font-semibold text-sky-800 bg-sky-200 px-2 py-0.5 rounded-md mb-3 inline-block">Fhcrevberf</span>
                             <ul class="list-disc ml-3 space-y-1.5 text-gray-700">
-                                <li>Fhcvab vapyvanqb (U)</li>
+                                <li>Fhcvab vapovanqb (U)</li>
                                 <li>Chyybire (U)</li>
                                 <li>Pehpvsvkb ergb (U)</li>
                                 <li>Ryrinçãb yngreny (U)</li>
-                                <li>Noqbzvany cenapun</li>
+                                <li>Noqbzvany cenzpun</li>
                             </ul>
                         </td>
 
@@ -280,12 +273,12 @@
                         <!-- Quinta (Vazia p/ Smartfit) -->
                         <td class="p-3 md:p-4 bg-gray-50/30 print-bg border-l border-white"></td>
 
-                        <!-- Sexta (Descanso Mesclado) -->
+                        <!-- Sexta (Descanso Mesclado para as duas linhas) -->
                         <td class="p-3 md:p-4 bg-slate-50/50 print-bg border-l border-white text-center" rowspan="2">
                             <span class="text-[11px] font-semibold text-slate-700 bg-slate-200 px-2 py-0.5 rounded-md inline-block mt-2">Qrfpnafb</span>
                         </td>
 
-                        <!-- Sábado -->
+                        <!-- Sábado (SmartFit) -->
                         <td class="p-3 md:p-4 bg-orange-50/30 print-bg border-l border-gray-100">
                             <span class="text-[11px] font-semibold text-orange-800 bg-orange-200 px-2 py-0.5 rounded-md mb-3 inline-block">Vasrevberf</span>
                             <ul class="list-disc ml-3 space-y-1.5 text-gray-700">
@@ -298,7 +291,7 @@
                             </ul>
                         </td>
 
-                        <!-- Domingo -->
+                        <!-- Domingo (SmartFit) -->
                         <td class="p-3 md:p-4 bg-sky-50/40 print-bg border-l border-white">
                             <span class="text-[11px] font-semibold text-sky-800 bg-sky-200 px-2 py-0.5 rounded-md mb-3 inline-block">Fhcrevberf</span>
                             <ul class="list-disc ml-3 space-y-1.5 text-gray-700">
@@ -317,13 +310,13 @@
                             Pbaqbzíavb
                         </td>
                         
-                        <!-- Segunda (Vazia) -->
+                        <!-- Segunda (Vazia p/ Condominio) -->
                         <td class="p-3 md:p-4 bg-gray-50/30 print-bg border-l border-white"></td>
 
-                        <!-- Terça (Vazia) -->
+                        <!-- Terça (Vazia p/ Condominio) -->
                         <td class="p-3 md:p-4 bg-gray-50/30 print-bg border-l border-white"></td>
 
-                        <!-- Quarta (Descanso Ativo / Esteira) -->
+                        <!-- Quarta (Condominio - Descanso Ativo) -->
                         <td class="p-3 md:p-4 bg-emerald-50/40 print-bg border-l border-white">
                             <span class="text-[11px] font-semibold text-emerald-800 bg-emerald-200 px-2 py-0.5 rounded-md mb-3 inline-block">Qrfpnafb ngvib</span>
                             <ul class="list-disc ml-3 space-y-1.5 text-gray-700">
@@ -331,7 +324,7 @@
                             </ul>
                         </td>
 
-                        <!-- Quinta (Core | Alongamento) -->
+                        <!-- Quinta (Condominio - Core/Alongamento) -->
                         <td class="p-3 md:p-4 bg-purple-50/40 print-bg border-l border-white">
                             <span class="text-[11px] font-semibold text-purple-800 bg-purple-200 px-2 py-0.5 rounded-md mb-3 inline-block">Pber | Nybatnzragb</span>
                             <ul class="list-disc ml-3 space-y-1.5 text-gray-700">
@@ -343,12 +336,12 @@
                             </ul>
                         </td>
 
-                        <!-- Sexta está mesclada da linha de cima -->
+                        <!-- Sexta Omitida pelo rowspan -->
 
-                        <!-- Sábado (Vazia) -->
+                        <!-- Sábado (Vazia p/ Condominio) -->
                         <td class="p-3 md:p-4 bg-gray-50/30 print-bg border-l border-gray-100"></td>
 
-                        <!-- Domingo (Vazia) -->
+                        <!-- Domingo (Vazia p/ Condominio) -->
                         <td class="p-3 md:p-4 bg-gray-50/30 print-bg border-l border-white"></td>
                     </tr>
                 </tbody>
@@ -390,8 +383,11 @@
 
             loginScreen.style.opacity = '0';
             setTimeout(() => {
+                loginScreen.classList.remove('tela-segura');
                 loginScreen.style.display = 'none';
-                mainContent.classList.remove('hidden');
+                
+                // Remove a blindagem que escondia a tabela
+                mainContent.classList.remove('hidden', 'blindagem');
                 setTimeout(() => {
                     mainContent.style.opacity = '1';
                 }, 50);
@@ -405,12 +401,14 @@
             } catch (e) {}
 
             if (isAuth) {
-                document.getElementById('login-screen').style.display = 'none';
-                const mainContent = document.getElementById('main-content');
+                const loginScreen = document.getElementById('login-screen');
+                loginScreen.classList.remove('tela-segura');
+                loginScreen.style.display = 'none';
                 
+                const mainContent = document.getElementById('main-content');
                 decodeContent();
                 
-                mainContent.classList.remove('hidden');
+                mainContent.classList.remove('hidden', 'blindagem');
                 mainContent.style.opacity = '1';
             }
         }
