@@ -333,4 +333,112 @@
 
                         <!-- Quinta (Core | Alongamento) -->
                         <td class="p-3 md:p-4 bg-purple-50/40 print-bg border-l border-white">
-                            <span class="text-[11px] font-semibold text-purple-800 bg-purple-200 px-2 py-0.5 rounded-md mb-3 inline-block">Pber | Ny
+                            <span class="text-[11px] font-semibold text-purple-800 bg-purple-200 px-2 py-0.5 rounded-md mb-3 inline-block">Pber | Nybatnzragb</span>
+                            <ul class="list-disc ml-3 space-y-1.5 text-gray-700">
+                                <li>Ryrinçãb qr creanf</li>
+                                <li>Syrkãb noq (Z)</li>
+                                <li>Chknqbe nygb seragr</li>
+                                <li>Geíprcf pbeqn</li>
+                                <li>Nybatnzragb rfcnyqne</li>
+                            </ul>
+                        </td>
+
+                        <!-- Sexta está mesclada da linha de cima -->
+
+                        <!-- Sábado (Vazia) -->
+                        <td class="p-3 md:p-4 bg-gray-50/30 print-bg border-l border-gray-100"></td>
+
+                        <!-- Domingo (Vazia) -->
+                        <td class="p-3 md:p-4 bg-gray-50/30 print-bg border-l border-white"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script>
+        // Função mágica que traduz o texto cifrado de volta para português 
+        function rot13(str) {
+            return str.replace(/[a-zA-Z]/g, function(c) {
+                return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+            });
+        }
+
+        // Aplica a tradução apenas nos textos da tabela, sem quebrar o layout!
+        function decodeContent() {
+            const walker = document.createTreeWalker(
+                document.getElementById('main-content'),
+                NodeFilter.SHOW_TEXT,
+                null,
+                false
+            );
+            let node;
+            while (node = walker.nextNode()) {
+                if (node.nodeValue.trim() !== '') {
+                    node.nodeValue = rot13(node.nodeValue);
+                }
+            }
+        }
+
+        function showContent() {
+            const loginScreen = document.getElementById('login-screen');
+            const mainContent = document.getElementById('main-content');
+            
+            // Decifra o conteúdo
+            decodeContent();
+
+            loginScreen.style.opacity = '0';
+            setTimeout(() => {
+                loginScreen.style.display = 'none';
+                mainContent.classList.remove('hidden');
+                setTimeout(() => {
+                    mainContent.style.opacity = '1';
+                }, 50);
+            }, 300);
+        }
+
+        function checkAuth() {
+            let isAuth = false;
+            try {
+                isAuth = localStorage.getItem('rotina_auth') === 'true';
+            } catch (e) {}
+
+            if (isAuth) {
+                document.getElementById('login-screen').style.display = 'none';
+                const mainContent = document.getElementById('main-content');
+                
+                decodeContent();
+                
+                mainContent.classList.remove('hidden');
+                mainContent.style.opacity = '1';
+            }
+        }
+
+        function login() {
+            const input = document.getElementById('pwd-input').value.trim();
+            const errorMsg = document.getElementById('error-msg');
+            
+            // Senha continua sendo 726632
+            if (btoa(input.split('').reverse().join('')) === 'MjM2NjI3') {
+                errorMsg.classList.add('hidden');
+                try {
+                    localStorage.setItem('rotina_auth', 'true');
+                } catch (e) { }
+                showContent();
+            } else {
+                errorMsg.classList.remove('hidden');
+                document.getElementById('pwd-input').value = '';
+                document.getElementById('pwd-input').focus();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            checkAuth();
+            document.getElementById('pwd-input').addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') login();
+            });
+        });
+    </script>
+</body>
+</html>
